@@ -1,0 +1,12 @@
+.box {
+  border: grey solid;
+}
+
+.box-green {
+  border: grey solid;
+  background-color: green;
+}
+
+.app {
+  text-align: center;
+}
