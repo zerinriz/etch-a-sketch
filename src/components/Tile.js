@@ -1,14 +1,22 @@
 const Tile = ({ dimension, color }) => {
   const style = {
-    margin:"auto",
+    margin: "auto",
     border: "1px solid black",
     width: dimension,
     height: dimension,
   };
+  const changeRgb = (e) => {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    if (color === "black") {
+      e.target.style.backgroundColor = color;
+    } else {
+      e.target.style.backgroundColor = `rgb(${r},${g},${b})`;
+    }
+  };
 
-  const changeColor = (e) => (e.target.style.backgroundColor = color);
-
-  return <div className="gridElement" style={style} onMouseOver={changeColor} />;
+  return <div className="gridElement" style={style} onMouseOver={changeRgb} />;
 };
 
 export default Tile;

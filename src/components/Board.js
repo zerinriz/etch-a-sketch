@@ -9,7 +9,7 @@ const Board = ({ size, color }) => {
   }
 
   const boardStyle = {
-    border: "solid grey",
+    border: "solid rgba(0,212,255,1)",
     display: "inline-grid",
     gridTemplateColumns: `repeat(${size}, 1fr)`,
     maxWidth: "500px",
